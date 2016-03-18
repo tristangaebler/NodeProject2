@@ -23,8 +23,8 @@ ArrayNode<Type>::ArrayNode() : Node<Type>(){
 template <class Type>
 ArrayNode<Type>::ArrayNode(const Type& value) : Node<Type>(value) {
 
-	this->value = value;
 	this->next = nullptr;
+    this->setValue(value);
 }
 
 /*
@@ -47,7 +47,7 @@ ArrayNode<Type>::~ArrayNode() {
 
 template <class Type>
 void ArrayNode<Type> :: setNext(ArrayNode<Type> * next) {
-
+    this->next = next;
 }
 
 template <class Type>

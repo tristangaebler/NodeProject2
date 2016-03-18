@@ -13,7 +13,8 @@
 template <class Type>
 class ArrayNode: public Node<Type> { //Parent is always at the end
 private:
-	ArrayNode * next;
+    ArrayNode * next;
+
 public:
 	ArrayNode(); //Regular constructor
 	ArrayNode(const Type& value);
@@ -21,6 +22,7 @@ public:
 	virtual ~ArrayNode();
 	ArrayNode * getNext();
 	void setNext(ArrayNode * next);
+
 };
 
 #endif /* MODEL_ARRAYNODE_H_ */

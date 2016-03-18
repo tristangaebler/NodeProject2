@@ -164,11 +164,11 @@ void CTECList<Type>::addAtIndex(int index, const Type& value)
 
 	if (index == 0)
 	{
-		addFront(value);
+        addToFront(value);
 	}
 	else if(index == size)
 	{
-		addEnd(value);
+        addToFront(value);
 	}
 	else
 	{
@@ -231,7 +231,7 @@ Type CTECList<Type>::removeEnd()
 		toDelete = current;
 		thing = toDelete->getValue();
 		delete toDelete;
-		previous->setNext() = nullptr;
+		previous->setNext(nullptr);
 		end = previous;
 	}
 
@@ -282,7 +282,7 @@ Type CTECList<Type>::removeAtIndex(int index)
 				delete toDelete;
 				previous->setNext(newNext);
 			}
-			current = current->next();
+            current = current->getNext();
 		}
 	}
 
