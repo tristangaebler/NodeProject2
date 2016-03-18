@@ -34,6 +34,7 @@ public:
 	Type removeFront();
 	Type removeEnd();
 	Type removeAtIndex(int index);
+    int indexOf(Type searchValue);
 
 };
 
