@@ -74,7 +74,7 @@ Type CTECList<Type>::getEnd()
 template<class Type>
 Type CTECList<Type>::getAtIndex(int index)
 {
-	assert(index > size || index < 0);
+    assert(index < this->size && index >= 0);
 	ArrayNode<Type>* current = head;
 
 	for (int i = 0; i < index - 1; i++)
@@ -160,7 +160,8 @@ void CTECList<Type>::addAtIndex(int index, const Type& value)
 	ArrayNode<Type>* current = head;
 	ArrayNode<Type>* previous = current;
 
-	assert(index <= size && index >= 0);
+    //Assertions be salty
+	assert(index >= size && index >= 0);
 
 	if (index == 0)
 	{

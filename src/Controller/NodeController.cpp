@@ -55,7 +55,7 @@ void NodeController::testLists()
     myList.addToFront(7); //Testing addToFront
     cout << "Get front should be 7 and is: " << myList.getFront() << endl;
     
-    myList.addAtIndex(1, 56); //Testing add at index
+    myList.addAtIndex(3, 56); //Testing add at index
     cout << "Add at index should be 56 and is: " << myList.getAtIndex(1) << endl;
     
     myList.addToEnd(23); //Test add to end
