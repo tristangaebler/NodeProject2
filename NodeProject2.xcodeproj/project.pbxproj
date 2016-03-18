@@ -14,7 +14,6 @@
 		A3DADA4E1C99A53A006D1994 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DADA411C99A53A006D1994 /* CTECList.cpp */; };
 		A3DADA4F1C99A53A006D1994 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DADA431C99A53A006D1994 /* Node.cpp */; };
 		A3DADA501C99A53A006D1994 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DADA451C99A53A006D1994 /* Timer.cpp */; };
-		A3DADA511C99A53A006D1994 /* TestList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DADA481C99A53A006D1994 /* TestList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,8 +43,6 @@
 		A3DADA441C99A53A006D1994 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		A3DADA451C99A53A006D1994 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		A3DADA461C99A53A006D1994 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
-		A3DADA481C99A53A006D1994 /* TestList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestList.cpp; sourceTree = "<group>"; };
-		A3DADA491C99A53A006D1994 /* TestList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +77,6 @@
 			children = (
 				A3DADA381C99A53A006D1994 /* Controller */,
 				A3DADA3C1C99A53A006D1994 /* Model */,
-				A3DADA471C99A53A006D1994 /* Tests */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -110,15 +106,6 @@
 				A3DADA461C99A53A006D1994 /* Timer.h */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		A3DADA471C99A53A006D1994 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A3DADA481C99A53A006D1994 /* TestList.cpp */,
-				A3DADA491C99A53A006D1994 /* TestList.h */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +167,6 @@
 				A3DADA4F1C99A53A006D1994 /* Node.cpp in Sources */,
 				A3DADA4A1C99A53A006D1994 /* NodeController.cpp in Sources */,
 				A3DADA501C99A53A006D1994 /* Timer.cpp in Sources */,
-				A3DADA511C99A53A006D1994 /* TestList.cpp in Sources */,
 				A3DADA4B1C99A53A006D1994 /* NodeRunner.cpp in Sources */,
 				A3DADA4C1C99A53A006D1994 /* ArrayNode.cpp in Sources */,
 				A3DADA4E1C99A53A006D1994 /* CTECList.cpp in Sources */,
@@ -303,6 +289,7 @@
 				A3DADA361C99A4B6006D1994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

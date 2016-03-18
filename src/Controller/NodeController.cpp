@@ -25,13 +25,6 @@ NodeController::~NodeController() {
 /*
  * This is the start method that is void. We are giving the CTECArray values. Then we print the values out using cout <<.
  */
-
-void NodeController::testLists() {
-	numbers->addToFront(3);
-	numbers->addToEnd(8);
-
-	cout << "End should be 8 and beginning should be 3" << numbers->getEnd() <<endl;
-}
 void NodeController :: start() {
 
 	testLists();
@@ -55,4 +48,34 @@ void NodeController :: start() {
 	arrayTimer.stopTimer();
 	arrayTimer.displayTimerInfo();
 }
+
+void NodeController::testLists()
+{
+    CTECList<int> myList;
+    myList.addToFront(7); //Testing addToFront
+    cout << "Get front should be 7 and is: " << myList.getFront() << endl;
+    
+    myList.addAtIndex(1, 56); //Testing add at index
+    cout << "Add at index should be 56 and is: " << myList.getAtIndex(1) << endl;
+    
+    myList.addToEnd(23); //Test add to end
+    cout << "Add to end should be 23 and is: " << myList.getEnd() << endl;
+    
+    myList.set(2, 34); //Testing the set method
+    cout << "Set method should return 34 and is returning: " << myList.getAtIndex(2) << endl;
+    
+    myList.removeFront(); //Testing the removeFront method
+    cout << "There should be nothing in fron and front has: " << myList.getFront() << endl;
+    
+    myList.removeAtIndex(2); //Testing the remove at index
+    cout << "Index 2 should have nothing and has " << myList.getAtIndex(2) << endl;
+    
+    myList.removeEnd(); //Testing remove from End method
+    cout << "The end should have nothing and has: " << myList.getEnd() << endl;
+   
+    cout << "The size of the list is: " << myList.getSize() << endl; //Testing the getSize method
+    
+}
+
+
 
