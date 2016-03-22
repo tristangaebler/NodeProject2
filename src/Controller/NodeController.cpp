@@ -29,24 +29,24 @@ void NodeController :: start() {
 
 	testLists();
 
-	arrayTimer.startTimer();
+//	arrayTimer.startTimer();
 
-	cout << "TESTING 123" << endl;
-
-	for(int index = 0; index < myIntArray->getSize(); index++) {
-		cout << "build" << index << endl;
-		myIntArray->set(index, (23 * index));
-
-	}
-	for(int index = 0; index < myIntArray->getSize(); index++) {
-		cout << "export" << index << endl;
-		cout << "These are some integers that " << index << "contain " << myIntArray->get(index) << endl;
-	}
-
-	cout << "TESTING 123" << endl;
-
-	arrayTimer.stopTimer();
-	arrayTimer.displayTimerInfo();
+//	cout << "TESTING 123" << endl;
+//
+//	for(int index = 0; index < myIntArray->getSize(); index++) {
+//		cout << "build" << index << endl;
+//		myIntArray->set(index, (23 * index));
+//
+//	}
+//	for(int index = 0; index < myIntArray->getSize(); index++) {
+//		cout << "export" << index << endl;
+//		cout << "These are some integers that " << index << "contain " << myIntArray->get(index) << endl;
+//	}
+//
+//	cout << "TESTING 123" << endl;
+//
+//	arrayTimer.stopTimer();
+//	arrayTimer.displayTimerInfo();
 }
 
 void NodeController::testLists()

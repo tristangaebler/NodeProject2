@@ -12,7 +12,7 @@
  * ArrayNode method with a template of class Type. That part is still confusing. This points to next which eqauls a nullPointer.
  */
 template <class Type>
-ArrayNode<Type>::ArrayNode() : Node<Type>(){
+ArrayNode<Type>::ArrayNode() : Node<Type>() {
 
 	this->next = nullptr;
 
@@ -24,7 +24,7 @@ template <class Type>
 ArrayNode<Type>::ArrayNode(const Type& value) : Node<Type>(value) {
 
 	this->next = nullptr;
-    this->setValue(value;
+    this->setValue(value);
 }
 
 /*
