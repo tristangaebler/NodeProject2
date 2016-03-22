@@ -63,16 +63,16 @@ void NodeController::testLists()
     cout << "Add to end should be 23 and is: " << myList.getEnd() << endl;
     
     myList.set(2, 34); //Testing the set method
-    cout << "Set method should return 34 and is returning: " << myList.getAtIndex(2) << endl;
+    cout << "Set method should return 23 and is returning: " << myList.getAtIndex(2) << endl;
     
     myList.removeFront(); //Testing the removeFront method
-    cout << "There should be nothing in front and front has: " << myList.getFront() << endl;
+    cout << "There should be 7 in front and front has: " << myList.getFront() << endl;
     
     myList.removeAtIndex(2); //Testing the remove at index
     cout << "The list should be shrunk by one: " << myList.getSize() << endl;
     
     myList.removeEnd(); //Testing remove from End method
-    cout << "The end should have nothing and has: " << myList.getEnd() << endl;
+    cout << "The end should be 7 and is:  " << myList.getEnd() << endl;
    
     cout << "The size of the list is: " << myList.getSize() << endl; //Testing the getSize method
     
