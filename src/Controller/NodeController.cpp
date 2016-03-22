@@ -47,6 +47,7 @@ void NodeController :: start() {
 //
 //	arrayTimer.stopTimer();
 //	arrayTimer.displayTimerInfo();
+    
 }
 
 void NodeController::testLists()
@@ -55,7 +56,7 @@ void NodeController::testLists()
     myList.addToFront(7); //Testing addToFront
     cout << "Get front should be 7 and is: " << myList.getFront() << endl;
     
-    myList.addAtIndex(3, 56); //Testing add at index
+    myList.addAtIndex(1, 56); //Testing add at index
     cout << "Add at index should be 56 and is: " << myList.getAtIndex(1) << endl;
     
     myList.addToEnd(23); //Test add to end
@@ -65,10 +66,10 @@ void NodeController::testLists()
     cout << "Set method should return 34 and is returning: " << myList.getAtIndex(2) << endl;
     
     myList.removeFront(); //Testing the removeFront method
-    cout << "There should be nothing in fron and front has: " << myList.getFront() << endl;
+    cout << "There should be nothing in front and front has: " << myList.getFront() << endl;
     
     myList.removeAtIndex(2); //Testing the remove at index
-    cout << "Index 2 should have nothing and has " << myList.getAtIndex(2) << endl;
+    cout << "The list should be shrunk by one: " << myList.getSize() << endl;
     
     myList.removeEnd(); //Testing remove from End method
     cout << "The end should have nothing and has: " << myList.getEnd() << endl;

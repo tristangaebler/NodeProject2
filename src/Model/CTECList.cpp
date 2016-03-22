@@ -161,7 +161,7 @@ void CTECList<Type>::addAtIndex(int index, const Type& value)
 	ArrayNode<Type>* previous = current;
 
     //Assertions be salty
-	assert(index >= size && index >= 0);
+	assert(index <= size && index >= 0);
 
 	if (index == 0)
 	{
