@@ -20,6 +20,7 @@ private:
 	ArrayNode<Type> * head;
 	ArrayNode<Type> * end;
 	void calculateSize();
+        void swap(int indexOne, int indexTwo);
 public:
 	CTECList();
 	virtual ~CTECList();
@@ -35,7 +36,6 @@ public:
 	Type removeEnd();
 	Type removeAtIndex(int index);
     int indexOf(Type searchValue);
-    void swap(int indexOne, int indexTwo);
     Type getFromIndex(int index);
     void selectionSort();
 

@@ -7,6 +7,7 @@
 
 #include "NodeController.h"
 #include <iostream>
+#include <stdlib.h>
 
 /*
  * This is the Constructor of the NodeController class. We are giving the CTECArray 5 indexes or spots.
@@ -76,6 +77,44 @@ void NodeController::testLists()
    
     cout << "The size of the list is: " << myList.getSize() << endl; //Testing the getSize method
 }
+
+void NodeController::checkSorts()
+{
+    /*
+     *Create list of array
+     *fill with random
+     *fill with orderd
+     *start time
+     *sort
+     *stop time
+     *print
+     */
+    
+    CTECArray<int> sortNumArray(5);
+    CTECList<int> sortNumList;
+    
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        int randomValue = rand();
+        sortNumArray.set(spot, randomValue);
+        sortNumList.addToEnd(randomValue);
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
