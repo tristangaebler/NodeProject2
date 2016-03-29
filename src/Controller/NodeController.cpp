@@ -92,14 +92,25 @@ void NodeController::checkSorts()
     
     CTECArray<int> sortNumArray(5);
     CTECList<int> sortNumList;
+    int cPlusPLusArray[5000];
     
     for(int spot = 0; spot < 5000; spot++)
     {
         int randomValue = rand();
         sortNumArray.set(spot, randomValue);
         sortNumList.addToEnd(randomValue);
+        cPlusPLusArray[spot] = randomValue;
     }
     
+    Timer listTimer;
+    listTimer.startTimer();
+    sortNumList.selectionSort();
+    listTimer.stopTimer();
+    listTimer.displayTimerInfo();
+    listTimer.resetTimer();
+    
+    listTimer.resetTimer();
+    listTimer.startTimer();
     
 }
 
