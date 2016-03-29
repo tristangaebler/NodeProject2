@@ -75,7 +75,6 @@ void NodeController::testLists()
     cout << "The end should be 7 and is:  " << myList.getEnd() << endl;
    
     cout << "The size of the list is: " << myList.getSize() << endl; //Testing the getSize method
-    
 }
 
 

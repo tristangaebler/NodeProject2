@@ -240,6 +240,28 @@ Type CTECList<Type>::removeEnd()
 	return thing;
 }
 
+template<class Type>
+Type CTECList<Type>::getFromIndex(int index)
+{
+    Assert(this->size > 0);
+    
+    assert(index>= 0 && index < size);
+    
+    ArrayNode<Type> * current = head;
+    Type returnValue;
+    
+    for(int spot = 0; spot <= index; spot++)
+    {
+        if(spot == index)
+        {
+            returnValue =  current->getValue();
+        }
+        
+        current = current->getNext();
+    }
+    
+    return current->getValue();
+}
 /*
  * Declare all of the nessacary nodes
  * assert
@@ -336,6 +358,45 @@ int CTECList<Type> :: indexOf(Type searchValue)
     index = -1;
     return index;
 }
+
+template <class Type>
+void CTECList<Type>::swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    ArrayNode<Type> * first = getFromIndex(indexOne);
+    ArrayNode<Type> * second = getFromIndex(indexTwo);
+    ArrayNode<Type> * temp = new ArrayNode<Type>();
+    
+    temp->setValue(first->getValue());
+    first->setValue(second->getValue());
+    second->setValue(temp->getValue());
+    
+    delete temp;
+    
+}
+
+template <class Type>
+void CTECList<Type>::selectionSort()
+{
+    int innerLoop, outerLoop;
+    for(outerLoop = 0; outerLoop < this->size()-1; outerLoop++)
+    {
+        int selectMin = outerLoop;
+        for(innerLoop = outerLoop + 1; innerLoop < size; innerLoop++)
+        {
+            if(getAtIndex(innerLoop) < getFromIndex(selectMin))
+            {
+                selectMin = innerLoop;
+            }
+        }
+        
+        if(selectMin != outerLoop)
+        {
+            swap(outerLoop, selectMin);
+        }
+    }
+}
+
 
 
 

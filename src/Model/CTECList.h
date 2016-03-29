@@ -35,6 +35,9 @@ public:
 	Type removeEnd();
 	Type removeAtIndex(int index);
     int indexOf(Type searchValue);
+    void swap(int indexOne, int indexTwo);
+    Type getFromIndex(int index);
+    void selectionSort();
 
 };
 
