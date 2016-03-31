@@ -26,29 +26,9 @@ NodeController::~NodeController() {
 /*
  * This is the start method that is void. We are giving the CTECArray values. Then we print the values out using cout <<.
  */
-void NodeController :: start() {
-
-	testLists();
-
-//	arrayTimer.startTimer();
-
-//	cout << "TESTING 123" << endl;
-//
-//	for(int index = 0; index < myIntArray->getSize(); index++) {
-//		cout << "build" << index << endl;
-//		myIntArray->set(index, (23 * index));
-//
-//	}
-//	for(int index = 0; index < myIntArray->getSize(); index++) {
-//		cout << "export" << index << endl;
-//		cout << "These are some integers that " << index << "contain " << myIntArray->get(index) << endl;
-//	}
-//
-//	cout << "TESTING 123" << endl;
-//
-//	arrayTimer.stopTimer();
-//	arrayTimer.displayTimerInfo();
-    
+void NodeController :: start()
+{
+    doMergeSort();
 }
 
 void NodeController::testLists()
@@ -116,17 +96,27 @@ void NodeController::checkSorts()
 
 void NodeController::doMergeSort()
 {
-    mergeData = new int[5000];
-    for(int spot = 0; spot < 5000; spot++)
+    mergeData = new int[100000000];
+    for(int spot = 0; spot < 100000000; spot++)
     {
         int randomValue = rand();
         mergeData[spot] = randomValue;
+    }
+    for(int spot = 0; spot < 100000000; spot++)
+    {
+        cout << mergeData[spot] << ",";
     }
     Timer mergeTimer;
     mergeTimer.startTimer();
     mergeSort(mergeData, 5000);
     mergeTimer.stopTimer();
     mergeTimer.displayTimerInfo();
+    for(int spot = 0; spot < 100000000; spot++)
+    {
+        cout << mergeData[spot] << ",";
+    }
+    
+    delete [] mergeData;
 }
 
 void NodeController::mergeSort(int dataArray[], int size)
@@ -185,6 +175,7 @@ void NodeController::merge(int data[], int sizeOne, int sizeTwo)
     }
     delete [] temp;
 }
+
 
 
 

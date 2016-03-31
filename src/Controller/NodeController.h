@@ -34,6 +34,7 @@ private :
     void doMergeSort();
     void mergeSort(int dataArray[], int size);
     void merge(int data[], int sizeOne, int sizeTwo);
+    void doBogo();
 public:
 	NodeController();
 	virtual ~NodeController();
