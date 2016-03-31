@@ -28,8 +28,12 @@ private :
 	CTECArray<int> * myIntArray;
 	CTECList<int> * numbers;
 	Timer arrayTimer;
+    int * mergeData;
 	void testLists();
     void checkSorts();
+    void doMergeSort();
+    void mergeSort(int dataArray[], int size);
+    void merge(int data[], int sizeOne, int sizeTwo);
 public:
 	NodeController();
 	virtual ~NodeController();

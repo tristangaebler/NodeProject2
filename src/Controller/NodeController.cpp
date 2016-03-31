@@ -114,6 +114,30 @@ void NodeController::checkSorts()
     
 }
 
+void NodeController::doMergeSort()
+{
+    mergeData = new int[5000];
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        int randomValue = rand();
+        mergeData[spot] = randomValue;
+    }
+    
+    mergeSort(mergeData, 5000);
+    
+}
+
+void NodeController::mergeSort(int dataArray[], int size)
+{
+    
+}
+
+void NodeController::merge(int data[], int sizeOne, int sizeTwo)
+{
+    
+}
+
+
 
 
 
