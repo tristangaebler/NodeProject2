@@ -176,6 +176,39 @@ void NodeController::merge(int data[], int sizeOne, int sizeTwo)
     delete [] temp;
 }
 
+void NodeController::quickSort(int data[], int size)
+{
+    int pivotIndex;
+    int sizeOne;
+    int sizeTwo;
+    if(size > 1)
+    {
+        sizeOne = pivotIndex;
+        sizeTwo = size - sizeOne - 1;
+        quickSort(data, sizeOne);
+        quickSort(data + pivotIndex + 1, sizeTwo);
+        
+    }
+}
+
+int NodeController::partition(int first, int last)
+{
+    return 0;
+    
+}
+
+void NodeController::swap(int first, int last)
+{
+    int temp = mergeData[first];
+    mergeData[first] = mergeData[last];
+    mergeData[last] = temp;
+}
+
+void NodeController::doQuick()
+{
+    cout << '\7';
+}
+
 
 
 
