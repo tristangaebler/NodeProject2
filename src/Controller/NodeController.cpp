@@ -131,7 +131,20 @@ void NodeController::doMergeSort()
 
 void NodeController::mergeSort(int dataArray[], int size)
 {
-
+    int sizeOne;
+    int sizeTwo;
+    
+    if(size > 1)
+    {
+        sizeOne = size / 2;
+        sizeTwo = size - sizeOne;
+        
+        mergeSort(dataArray, sizeOne);
+        mergeSort(dataArray + sizeOne, sizeTwo);
+        
+        merge(dataArray, sizeOne, sizeTwo);
+        
+    }
     
 }
 
