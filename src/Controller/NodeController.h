@@ -35,7 +35,7 @@ private :
     void mergeSort(int dataArray[], int size);
     void merge(int data[], int sizeOne, int sizeTwo);
     void doBogo();
-    void quickSort(int data[], int size);
+    void quickSort(int first, int last);
     int partition(int first, int last);
     void swap(int first, int second);
     void doQuick();

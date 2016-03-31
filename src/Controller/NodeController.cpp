@@ -28,7 +28,7 @@ NodeController::~NodeController() {
  */
 void NodeController :: start()
 {
-    doMergeSort();
+    doQuick();
 }
 
 void NodeController::testLists()
@@ -176,24 +176,41 @@ void NodeController::merge(int data[], int sizeOne, int sizeTwo)
     delete [] temp;
 }
 
-void NodeController::quickSort(int data[], int size)
+void NodeController::quickSort(int first, int last)
 {
     int pivotIndex;
     int sizeOne;
     int sizeTwo;
-    if(size > 1)
+    if(first <  last)
     {
-        sizeOne = pivotIndex;
-        sizeTwo = size - sizeOne - 1;
-        quickSort(data, sizeOne);
-        quickSort(data + pivotIndex + 1, sizeTwo);
+        pivotIndex = partition(first, last);
+        quickSort(first, pivotIndex-1);
+        quickSort(pivotIndex, last);
         
     }
 }
 
 int NodeController::partition(int first, int last)
 {
-    return 0;
+    
+    int pivot;
+    int index, smallIndex;
+    swap(first, (first +last) / 2 );
+    
+    pivot = mergeData[first];
+    smallIndex = first;
+    
+    for(index = first + 1; index <= last; index++)
+    {
+        if(mergeData[index] < pivot)
+        {
+            smallIndex++;
+            swap(smallIndex, index);
+        }
+    }
+    
+    swap(first, smallIndex);
+    return smallIndex;
     
 }
 
@@ -206,7 +223,19 @@ void NodeController::swap(int first, int last)
 
 void NodeController::doQuick()
 {
-    cout << '\7';
+    
+    mergeData = new int[500];
+    for(int spot = 0; spot < 500; spot++)
+    {
+        int randomValue = rand();
+        mergeData[spot] = randomValue;
+    }
+    Timer mergeTimer;
+    mergeTimer.startTimer();
+    mergeSort(mergeData, 500);
+    mergeTimer.stopTimer();
+    
+    delete [] mergeData;
 }
 
 
