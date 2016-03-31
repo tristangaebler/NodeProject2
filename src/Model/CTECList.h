@@ -20,7 +20,7 @@ private:
 	ArrayNode<Type> * head;
 	ArrayNode<Type> * end;
 	void calculateSize();
-        void swap(int indexOne, int indexTwo);
+    void swap(int indexOne, int indexTwo);
 public:
 	CTECList();
 	virtual ~CTECList();

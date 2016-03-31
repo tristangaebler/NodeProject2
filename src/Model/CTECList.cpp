@@ -243,7 +243,7 @@ Type CTECList<Type>::removeEnd()
 template<class Type>
 Type CTECList<Type>::getFromIndex(int index)
 {
-    Assert(this->size > 0);
+    assert(this->size > 0);
     
     assert(index>= 0 && index < size);
     
@@ -363,15 +363,9 @@ template <class Type>
 void CTECList<Type>::swap(int indexOne, int indexTwo)
 {
     assert(indexOne < size && indexTwo < size);
-    ArrayNode<Type> * first = getFromIndex(indexOne);
-    ArrayNode<Type> * second = getFromIndex(indexTwo);
-    ArrayNode<Type> * temp = new ArrayNode<Type>();
-    
-    temp->setValue(first->getValue());
-    first->setValue(second->getValue());
-    second->setValue(temp->getValue());
-    
-    delete temp;
+    Type temp = getFromIndex(indexOne);
+    set(indexOne, getFromIndex(indexTwo));
+    set(indexTwo, temp);
     
 }
 
@@ -379,7 +373,7 @@ template <class Type>
 void CTECList<Type>::selectionSort()
 {
     int innerLoop, outerLoop;
-    for(outerLoop = 0; outerLoop < this->size()-1; outerLoop++)
+    for(outerLoop = 0; outerLoop < size - 1; outerLoop++)
     {
         int selectMin = outerLoop;
         for(innerLoop = outerLoop + 1; innerLoop < size; innerLoop++)
