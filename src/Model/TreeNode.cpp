@@ -7,3 +7,11 @@
 //
 
 #include "TreeNode.hpp"
+
+template <class Type>
+TreeNode<Type> :: TreeNode() : Node<Type>()
+{
+    this->leftChild = nullptr;
+    this->rightChild = nullptr;
+    this->parent = nullptr;
+}
