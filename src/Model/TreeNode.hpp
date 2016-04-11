@@ -27,6 +27,6 @@ public:
     void setParent(TreeNode<Type> * parent);
     TreeNode<Type> * getLeftChild();
     TreeNode<Type> * getRightChild();
-    TreeNode<Type> * getParent;
+    TreeNode<Type> * getParent();
 };
 #endif /* TreeNode_hpp */
