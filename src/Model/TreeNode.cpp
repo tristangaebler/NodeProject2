@@ -38,19 +38,19 @@ TreeNode<Type> :: TreeNode(const Type & value, TreeNode<Type> * parent) : Node<T
 template <class Type>
 void TreeNode<Type> :: setLeftChild(TreeNode<Type> * leftChild)
 {
-    this->TreeNode = leftChild;
+    this->leftChild = leftChild;
 }
 
 template <class Type>
 void TreeNode<Type> :: setRightChild(TreeNode<Type> * rightChild)
 {
-    this->TreeNode = rightChild;
+    this->rightChild = rightChild;
 }
 
 template <class Type>
 void TreeNode<Type> :: setParent(TreeNode<Type> * parent)
 {
-    this->TreeNode = parent;
+    this->parent = parent;
 }
 
 template <class Type>
