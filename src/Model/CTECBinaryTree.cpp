@@ -4,7 +4,7 @@
 //
 //  Created by Gaebler, Tristan on 4/11/16.
 //  Copyright © 2016 Gaebler, Tristan. All rights reserved.
-//
+
 
 #include "CTECBinaryTree.hpp"
 
@@ -140,6 +140,19 @@ bool CTECBinaryTree<Type> :: insert(const Type &value)
     }
 }
 
+
+template <class Type>
+Type CTECBinaryTree<Type>::remove(const Type &value)
+{
+    if(!contains(value))
+    {
+        return value;
+    }
+    else
+    {
+        
+    }
+}
 
 
 
