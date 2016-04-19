@@ -21,6 +21,8 @@ private:
     bool balanced;
     bool contains(Type value, CTECBinaryTree<Type> * currentTree);
     void calculateSize(TreeNode<Type> * currentNode);
+    TreeNode<Type>* getRightMostChild(CTECBinaryTree * leftSubTree);
+    TreeNode<Type>* getLeftMostChild(CTECBinaryTree * rightSubTree);
 public:
     CTECBinaryTree();
     ~CTECBinaryTree();
@@ -34,6 +36,7 @@ public:
     void inorderTraversal(TreeNode<Type> * currentNode);
     void preorderTraversal(TreeNode<Type> * currentNode);
     void postorderTraversal(TreeNode<Type> * currentNode);
+    
     
 };
 
