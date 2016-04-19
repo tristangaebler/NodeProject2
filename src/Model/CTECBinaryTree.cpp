@@ -140,7 +140,9 @@ bool CTECBinaryTree<Type> :: insert(const Type &value)
     }
 }
 
-
+//*****NOTES*****
+//If we go left we get the right most child.
+//If we go right we get the left most child.
 template <class Type>
 Type CTECBinaryTree<Type>::remove(const Type &value)
 {

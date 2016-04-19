@@ -26,7 +26,7 @@ public:
     ~CTECBinaryTree();
     bool insert(const Type & value);
     bool contains(Type value);
-    Type remove(const Type& value);
+    Type remove(const Type& value); //Soap take out the binary tree
     int getHeight();
     int getSize();
     TreeNode<Type> * getRoot();
