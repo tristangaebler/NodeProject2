@@ -19,6 +19,7 @@
 #include "../Model/Timer.h"
 #include "../Model/CTECList.cpp"
 #include "../Model/CTECList.h"
+#include "../Model/CTECBinaryTree.cpp"
 #include <string>
 
 using namespace std;
@@ -43,6 +44,7 @@ public:
 	NodeController();
 	virtual ~NodeController();
 	void start();
+    void tryTree();
 };
 
 #endif /* CONTROLLER_NODECONTROLLER_H_ */

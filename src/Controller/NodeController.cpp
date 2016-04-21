@@ -28,7 +28,15 @@ NodeController::~NodeController() {
  */
 void NodeController :: start()
 {
-    doQuick();
+    tryTree();
+}
+
+void NodeController::tryTree()
+{
+    CTECBinaryTree<int> testTree;
+    testTree.insert(7);
+    testTree.insert(10);
+    testTree.insert(-5);
 }
 
 void NodeController::testLists()
