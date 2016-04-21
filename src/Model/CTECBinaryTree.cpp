@@ -228,8 +228,27 @@ void CTECBinaryTree<Type>::remove(TreeNode<Type> * nodeToRemove)
         delete temp;
     }
     else
-    {;
-        current = getRightMostChild(nodeToRemove->getLeftChild);
+    {
+        current = nodeToRemove->getLeftChild();
+        trailing = nullptr;
+        while (current->getRightChild != nullptr)
+        {
+            trailing = current;
+            current = current->getRightChild();
+        }
+        
+        nodeToRemove->setValue(current->getValue());
+        
+        if(trailing == nullptr)
+        {
+            nodeToRemove->setLeftChild(current->getLeftChild);
+        }
+        else
+        {
+            trailing = setRightChild(current->getLeftChild());
+        }
+        
+        delete current;
     }
 
 }
