@@ -23,12 +23,13 @@ private:
     void calculateSize(TreeNode<Type> * currentNode);
     TreeNode<Type>* getRightMostChild(CTECBinaryTree * leftSubTree);
     TreeNode<Type>* getLeftMostChild(CTECBinaryTree * rightSubTree);
+    void remove(TreeNode<Type> * currentNode);
 public:
     CTECBinaryTree();
     ~CTECBinaryTree();
     bool insert(const Type & value);
     bool contains(Type value);
-    Type remove(const Type& value); //Soap take out the binary tree
+    void remove(const Type& value); //Soap take out the binary tree
     int getHeight();
     int getSize();
     TreeNode<Type> * getRoot();
@@ -36,10 +37,7 @@ public:
     void inorderTraversal(TreeNode<Type> * currentNode);
     void preorderTraversal(TreeNode<Type> * currentNode);
     void postorderTraversal(TreeNode<Type> * currentNode);
-    TreeNode<Type> * getRightMostChild(CTECBinaryTree<Type> leftSubTree);
-    TreeNode<Type> * getLeftMostChild(CTECBinaryTree<Type> rightSubTree);
-    
-    
+
 };
 
 #endif /* CTECBinaryTree_hpp */

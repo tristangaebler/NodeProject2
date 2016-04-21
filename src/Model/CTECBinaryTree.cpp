@@ -143,35 +143,62 @@ bool CTECBinaryTree<Type> :: insert(const Type &value)
 //*****NOTES*****
 //If we go left we get the right most child.
 //If we go right we get the left most child.
+/*
+ Find the node.
+ Check to see how many child nodes?
+ if 0
+ delete that node
+ else if only right
+ replace with left
+ else if only left
+ replace with right
+ else both
+ find LMR/RMC
+ swap with
+ do - left only/right only
+ */
+
 template <class Type>
-Type CTECBinaryTree<Type>::remove(const Type &value)
+void CTECBinaryTree<Type>::remove(const Type &value)
 {
+    TreeNode<Type> * current = root;
+    TreeNode<Type> * trailing = current;
     if(!contains(value))
     {
-        return value;
+        return;
     }
     else
     {
-        /*
-            Find the node.
-            Check to see how many child nodes?
-                if 0
-                    delete that node
-                else if only right
-                    replace with left
-                else if only left
-                    replace with right
-                else both
-                    find LMR/RMC
-                    swap with 
-                    do - left only/right only
-         */
+        while (current != nullptr && current->getValue() != value)
+        {
+            trailing = current;
+            if(current->getValue() > value)
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
         
+        if(current == true)
+        {
+            remove(root);
+        }
+        else if (trailing->getValue() > value)
+        {
+            remove(trailing->getLeftChild());
+        }
+        else
+        {
+            remove(trailing->getRightChild());
+        }
     }
 }
 
 template<class Type>
-TreeNode<Type> * CTECBinaryTree<Type> :: getRightMostChild(CTECBinaryTree<Type> leftSubTree)
+TreeNode<Type> * CTECBinaryTree<Type> :: getRightMostChild(CTECBinaryTree<Type> * leftSubTree)
 {
     TreeNode<Type> * rightNode = leftSubTree->getRoot();
     while(rightNode->getRightChild() != nullptr)
@@ -183,7 +210,7 @@ TreeNode<Type> * CTECBinaryTree<Type> :: getRightMostChild(CTECBinaryTree<Type> 
 }
 
 template<class Type>
-TreeNode<Type> * CTECBinaryTree<Type> :: getLeftMostChild(CTECBinaryTree<Type> rightSubTree)
+TreeNode<Type> * CTECBinaryTree<Type> :: getLeftMostChild(CTECBinaryTree<Type> * rightSubTree)
 {
     TreeNode<Type> * leftNode = rightSubTree->getRoot();
     while(leftNode->getLeftChild() != nullptr)
