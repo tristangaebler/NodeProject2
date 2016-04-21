@@ -10,6 +10,7 @@
 
 using namespace std;
 
+
 template <class Type>
 CTECBinaryTree<Type> :: CTECBinaryTree()
 {
@@ -17,6 +18,14 @@ CTECBinaryTree<Type> :: CTECBinaryTree()
     height = 0;
     balanced = true;
     size = 0;
+}
+template <class Type>
+CTECBinaryTree<Type> :: ~CTECBinaryTree()
+{
+    while (root != nullptr)
+    {
+        remove(root);
+    }
 }
 
 template <class Type>
