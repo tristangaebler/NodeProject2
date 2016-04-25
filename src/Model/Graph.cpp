@@ -21,7 +21,7 @@ void Graph<Type> :: addEdge(int source, int target)
 }
 
 template <class Type>
-void Graph<Type> :: addVertex(const Type& label)
+void Graph<Type> :: addVertex(const Type& vertexLabel)
 {
     int newVertexNumber;
     int otherNumber;
@@ -37,7 +37,7 @@ void Graph<Type> :: addVertex(const Type& label)
         edges[newVertexNumber] [otherNumber] = false;
     }
     
-    label[newVertexNumber] = label;
+    vertexLabel[newVertexNumber] = vertexLabel;
     
 }
 
@@ -59,3 +59,37 @@ Type& Graph<Type> :: operator[](int vertex)
     return labels[vertex];
     
 }
+
+template <class Type>
+Type Graph<Type> :: operator[](int vertex) const
+{
+    assert(vertex < size());
+    return labels[vertex];
+    
+}
+
+template <class Type>
+std::set<int> Graph<Type>:: neighbors(int vertex) const
+{
+    std::set<int> answer;
+    assert(vertex < size());
+    
+    for(int index = 0; index < size(); index++)
+    {
+        if(edges[vertex][index])
+        {
+            answer.insert(index);
+        }
+    }
+    
+    return answer;
+}
+
+
+
+
+
+
+
+
+
