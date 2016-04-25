@@ -8,21 +8,28 @@
 
 #ifndef Graph_hpp
 #define Graph_hpp
-
 #include <stdio.h>
+#include <set>
 namespace CTECData
 {
     template<class Type>
-    class MorningGraph
+    class Graph
     {
     private:
         static const int MAXIMUM = 20;
+        bool edges [MAXIMUM][MAXIMUM];
+        Type labels [MAXIMUM];
+        int manyVerticles;
     public:
-        MorningGraph();
-        virtual ~MorningGraph();
+        Graph();
+        virtual ~Graph();
         void addVertex(const Type& label);
         void addEdge(int source, int target);
         Type& operator [] (int vertex);
+        int size() const;
+        bool isEdge(int source, int target) const;
+        std::set<int> neighbors(int vertex);
+        Type operator [] (int vertex) const;
     };
 }
 #endif /* Graph_hpp */
