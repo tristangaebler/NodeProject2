@@ -19,6 +19,7 @@ CTECBinaryTree<Type> :: CTECBinaryTree()
     balanced = true;
     size = 0;
 }
+
 template <class Type>
 CTECBinaryTree<Type> :: ~CTECBinaryTree()
 {

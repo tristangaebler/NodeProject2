@@ -37,7 +37,6 @@ public:
     void inorderTraversal(TreeNode<Type> * currentNode);
     void preorderTraversal(TreeNode<Type> * currentNode);
     void postorderTraversal(TreeNode<Type> * currentNode);
-    void calculateSize(TreeNode <Type> * currentNode);
 
 };
 
