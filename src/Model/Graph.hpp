@@ -28,6 +28,7 @@ namespace CTECData
         Type& operator [] (int vertex);
         int size() const;
         bool isEdge(int source, int target) const;
+        void removeEdge(int source, int target);
         std::set<int> neighbors(int vertex) const;
         Type operator [] (int vertex) const;
     };

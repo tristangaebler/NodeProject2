@@ -85,6 +85,12 @@ std::set<int> Graph<Type>:: neighbors(int vertex) const
     return answer;
 }
 
+template <class Type>
+void Graph<Type> :: removeEdge(int source, int target)
+{
+    assert(source < size() && target < size());
+    edges[source][target] = false;
+}
 
 
 
