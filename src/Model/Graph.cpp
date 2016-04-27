@@ -7,6 +7,7 @@
 //
 
 #include "Graph.hpp"
+#include <iostream>
 using namespace CTECData;
 
 template <class Type>
@@ -91,6 +92,34 @@ void Graph<Type> :: removeEdge(int source, int target)
     assert(source < size() && target < size());
     edges[source][target] = false;
 }
+
+template <class Type>
+void Graph<Type>::depthFirstTraversal(Graph<Type> currentGraph, int vertex)
+{
+    bool markedVertices[MAXIMUM];
+    assert(vertex < currentGraph.size());
+    std::fill_n(markedVertices, currentGraph.size(), false);
+    depthFirstTraversal(currentGraph, vertex, markedVertices);
+}
+
+template <class Type>
+void Graph<Type>::depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool * markedVertices)
+{
+    std::set<int> connections = currentGraph.neighbors(vertex);
+    std::set<int>::iterator setIterator;
+    
+    markedVertices[vertex] = true;
+    std::cout << currentGraph[vertex] << std::endl;
+    
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+    {
+        if(!markedVertices[*setIterator])
+        {
+            depthFirstTraversal(currentGraph, *setIterator, markedVertices);
+        }
+    }
+}
+
 
 
 

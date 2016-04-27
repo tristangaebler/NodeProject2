@@ -10,6 +10,7 @@
 #define Graph_hpp
 #include <stdio.h>
 #include <set>
+#include <iostream>
 namespace CTECData
 {
     template<class Type>
@@ -20,6 +21,7 @@ namespace CTECData
         bool edges [MAXIMUM][MAXIMUM];
         Type labels [MAXIMUM];
         int manyVerticles;
+        void depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool * markedVertices);
     public:
         Graph();
         virtual ~Graph();
@@ -31,6 +33,8 @@ namespace CTECData
         void removeEdge(int source, int target);
         std::set<int> neighbors(int vertex) const;
         Type operator [] (int vertex) const;
+        void depthFirstTraversal(Graph<Type> currentGraph, int vertex);
+
     };
 }
 #endif /* Graph_hpp */
