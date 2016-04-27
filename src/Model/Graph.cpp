@@ -120,6 +120,41 @@ void Graph<Type>::depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool
     }
 }
 
+template <class Type>
+void Graph<Type>::breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
+{
+    bool markedVertices[MAXIMUM];
+    std::set<int> connections;
+    std::set<int>::iterator setIterator;
+    std::queue<int> vertexQueue;
+    assert(vertex < currentGraph.size());
+    
+    std::fill_n(markedVertices, currentGraph.size(), false);
+    markedVertices[vertex] = true;
+    std::cout << currentGraph[vertex] << std::endl;
+    vertexQueue.push(vertex);
+    
+    while (!vertexQueue.empty())
+    {
+        connections = currentGraph.neighbors(vertexQueue.front());
+        vertexQueue.pop();
+        
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+        {
+            if(!markedVertices[*setIterator])
+            {
+                markedVertices[*setIterator] = true;
+                std::cout << currentGraph[*setIterator] << std::endl;
+                vertexQueue.push(*setIterator);
+            }
+        }
+    }
+    
+    
+}
+
+
+
 
 
 
