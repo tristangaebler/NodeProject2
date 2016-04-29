@@ -20,6 +20,7 @@
 #include "../Model/CTECList.cpp"
 #include "../Model/CTECList.h"
 #include "../Model/CTECBinaryTree.cpp"
+#include "../Model/Graph.cpp"
 #include <string>
 
 using namespace std;
@@ -40,11 +41,13 @@ private :
     int partition(int first, int last);
     void swap(int first, int second);
     void doQuick();
+    
 public:
 	NodeController();
 	virtual ~NodeController();
 	void start();
     void tryTree();
+    void doGraphs()
 };
 
 #endif /* CONTROLLER_NODECONTROLLER_H_ */

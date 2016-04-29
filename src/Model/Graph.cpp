@@ -14,6 +14,24 @@ template <class Type>
 const int Graph<Type> :: MAXIMUM;
 
 template <class Type>
+Graph<Type> :: Graph()
+{
+    this->manyVerticles = 0;
+}
+
+template <class Type>
+Graph<Type>:: ~Graph()
+{
+    
+}
+
+template <class Type>
+int Graph<Type>::size() const
+{
+    return manyVerticles;
+}
+
+template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
 {
     assert(source < size());
@@ -149,8 +167,6 @@ void Graph<Type>::breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
             }
         }
     }
-    
-    
 }
 
 

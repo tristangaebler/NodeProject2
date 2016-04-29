@@ -6,6 +6,7 @@
  */
 
 #include "NodeController.h"
+
 #include <iostream>
 #include <stdlib.h>
 
@@ -246,6 +247,19 @@ void NodeController::doQuick()
     delete [] mergeData;
 }
 
+void NodeController::doGraphs()
+{
+    Graph<int> tester;
+    tester.addVertex(7);
+    tester.addVertex(18);
+    
+    tester.addEdge(0, 1);
+    tester.addEdge(1, 0);
+    tester.addEdge(9, 9);
+    
+    tester.breadthFirstTraversal(tester, 0);
+    
+}
 
 
 
