@@ -129,7 +129,7 @@ bool CTECBinaryTree<Type> :: contains(Type value, TreeNode<Type> * currentTree)
 template <class Type>
 bool CTECBinaryTree<Type> :: insert(const Type &value)
 {
-    TreeNode<Type> * insertedNode(value) = new TreeNode<Type>(value);
+    TreeNode<Type> *  insertedNode(value) = new TreeNode<Type>(value);
     TreeNode<Type> * current;
     TreeNode<Type> * trailingCurrent;
     assert(insertedNode != nullptr);
@@ -264,7 +264,7 @@ void CTECBinaryTree<Type>::remove(TreeNode<Type> * nodeToRemove)
     {
         current = nodeToRemove->getLeftChild();
         trailing = nullptr;
-        while (current->getRightMostChild() != nullptr)
+        while (current->getRightChild != nullptr)
         {
             trailing = current;
             current = current->getRightChild();
@@ -274,7 +274,7 @@ void CTECBinaryTree<Type>::remove(TreeNode<Type> * nodeToRemove)
         
         if(trailing == nullptr)
         {
-            nodeToRemove->setLeftChild(current->getLeftChild);
+            nodeToRemove->setLeftChild(current->getLeftChild());
         }
         else
         {
