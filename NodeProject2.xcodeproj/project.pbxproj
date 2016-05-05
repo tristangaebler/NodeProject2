@@ -17,6 +17,7 @@
 		A3DADA4E1C99A53A006D1994 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DADA411C99A53A006D1994 /* CTECList.cpp */; };
 		A3DADA4F1C99A53A006D1994 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DADA431C99A53A006D1994 /* Node.cpp */; };
 		A3DADA501C99A53A006D1994 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DADA451C99A53A006D1994 /* Timer.cpp */; };
+		A3E8E5151CDB8E9100076231 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3E8E5131CDB8E9100076231 /* HashTable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		A3DADA441C99A53A006D1994 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		A3DADA451C99A53A006D1994 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		A3DADA461C99A53A006D1994 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		A3E8E5131CDB8E9100076231 /* HashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
+		A3E8E5141CDB8E9100076231 /* HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				A312372E1CBBF991008EC43B /* CTECBinaryTree.hpp */,
 				A3BFAA271CCE597E003EE279 /* Graph.cpp */,
 				A3BFAA281CCE597E003EE279 /* Graph.hpp */,
+				A3E8E5131CDB8E9100076231 /* HashTable.cpp */,
+				A3E8E5141CDB8E9100076231 /* HashTable.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				A3DADA4C1C99A53A006D1994 /* ArrayNode.cpp in Sources */,
 				A312372F1CBBF991008EC43B /* CTECBinaryTree.cpp in Sources */,
 				A3DADA4E1C99A53A006D1994 /* CTECList.cpp in Sources */,
+				A3E8E5151CDB8E9100076231 /* HashTable.cpp in Sources */,
 				A3DADA4D1C99A53A006D1994 /* CTECArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

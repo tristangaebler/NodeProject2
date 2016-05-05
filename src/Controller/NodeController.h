@@ -46,8 +46,10 @@ public:
 	NodeController();
 	virtual ~NodeController();
 	void start();
+    void doGraphs();
     void tryTree();
-    void doGraphs()
+    
+ 
 };
 
 #endif /* CONTROLLER_NODECONTROLLER_H_ */
