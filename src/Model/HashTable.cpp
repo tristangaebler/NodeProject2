@@ -35,6 +35,10 @@ void HashTable<Type>::add(const Type &value)
 {
     if(!conatins(value))
     {
+        if(this->size/this->capacity >= this->efficiencyPercentage)
+        {
+            updateSize();
+        }
         int insertPosition = findPosition(value);
         
         if(internalStorage[insertPosition] != nullptr)
