@@ -29,7 +29,8 @@ namespace CTECData
         ~HashTable();
         void add(const Type& value);
         bool remove(Type value);
-        bool contains(const Type& value); 
+        bool contains(const Type& value);
+        int getSize();
     };
 }
 
