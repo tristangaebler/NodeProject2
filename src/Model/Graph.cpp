@@ -38,25 +38,22 @@ void Graph<Type>::addEdge(int source, int target)
     edges[source][target] = true;
 }
 
-template<class Type>
-void Graph<Type> :: addVertex(const Type& vertexlable)
+template <class Type>
+void Graph <Type> :: addVertex(const Type& vertexLabel)
 {
-    int newVertexNmber;
+    int newVertexNumber;
     int otherNumber;
-    
     assert(size() < MAXIMUM);
-    
-    newVertexNmber = manyVertices;
-    ++manyVertices;
-    for(otherNumber = 0; otherNumber< manyVertices; otherNumber ++)
+    newVertexNumber = manyVertices;
+    manyVertices++;
+    for(otherNumber =0; otherNumber < manyVertices; otherNumber++)
     {
-        edges[otherNumber][newVertexNmber] = false;
-        edges[newVertexNmber] [otherNumber] = false;
+        edges [otherNumber] [newVertexNumber] = false;
+        edges [newVertexNumber] [otherNumber] = false;
     }
+    labels [newVertexNumber] = vertexLabel;
     
-    vertexlable[newVertexNmber] = vertexlable;
 }
-
 template<class Type>
 bool Graph<Type>::isEdge(int source, int target) const
 {
