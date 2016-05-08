@@ -39,23 +39,22 @@ void Graph<Type>::addEdge(int source, int target)
 }
 
 template<class Type>
-void Graph<Type>::addVertex(const Type& vertexLabel)
+void Graph<Type> :: addVertex(const Type& vertexlable)
 {
-    int newVertexNumber;
+    int newVertexNmber;
     int otherNumber;
     
     assert(size() < MAXIMUM);
     
-    newVertexNumber = manyVertices;
+    newVertexNmber = manyVertices;
     ++manyVertices;
-    
-    for(otherNumber = 0; otherNumber < manyVertices; otherNumber++)
+    for(otherNumber = 0; otherNumber< manyVertices; otherNumber ++)
     {
-        edges[otherNumber][newVertexNumber] = false;
-        edges[newVertexNumber][otherNumber] = false;
+        edges[otherNumber][newVertexNmber] = false;
+        edges[newVertexNmber] [otherNumber] = false;
     }
     
-    vertexLabel[newVertexNumber] = vertexLabel;
+    vertexlable[newVertexNmber] = vertexlable;
 }
 
 template<class Type>
