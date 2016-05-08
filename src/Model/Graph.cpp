@@ -34,7 +34,7 @@ template<class Type>
 void Graph<Type>::addEdge(int source, int target)
 {
     assert(source < size());
-    assert(target < size());
+    //assert(target < size());
     edges[source][target] = true;
 }
 

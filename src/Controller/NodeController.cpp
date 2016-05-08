@@ -29,7 +29,7 @@ NodeController::~NodeController() {
  */
 void NodeController :: start()
 {
-    tryTree();
+    doGraphs();
 }
 
 void NodeController::tryTree()
@@ -270,12 +270,20 @@ void NodeController::doGraphs()
     Graph<int> tester;
     tester.addVertex(7);
     tester.addVertex(18);
+    tester.addVertex(42);
+    tester.addVertex(67);
+    tester.addVertex(32);
+    tester.addVertex(-18);
     
     tester.addEdge(0, 1);
-    tester.addEdge(1, 0);
-    tester.addEdge(9, 9);
+    tester.addEdge(1, 2);
+    tester.addEdge(2, 3);
+    tester.addEdge(3, 4);
+    tester.addEdge(4, 5);
+    tester.addEdge(5, 6);
     
-    tester.breadthFirstTraversal(tester, 0);
+   // tester.breadthFirstTraversal(tester, 0);
+
     
 }
 
