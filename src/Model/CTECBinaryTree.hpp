@@ -33,6 +33,7 @@ public:
     int getHeight();
     int getSize();
     TreeNode<Type> * getRoot();
+    int calculatedSize(TreeNode<Type>* currentNode);
     bool isBalanced();
     void inorderTraversal(TreeNode<Type> * currentNode);
     void preorderTraversal(TreeNode<Type> * currentNode);

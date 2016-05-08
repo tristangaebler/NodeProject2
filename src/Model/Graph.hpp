@@ -21,7 +21,7 @@ namespace CTECData
         static const int MAXIMUM = 20;
         bool edges [MAXIMUM][MAXIMUM];
         Type labels [MAXIMUM];
-        int manyVerticles;
+        int manyVertices;
         void depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool * markedVertices);
     public:
         Graph();
