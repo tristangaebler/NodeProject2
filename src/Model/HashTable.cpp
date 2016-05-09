@@ -57,7 +57,7 @@ void HashTable<Type>::add(HashNode<Type> * currentNode)
 }
 
 template <class Type>
-int HashTable<Type>::findPosition(HashNode<Type> * currentNode)
+int HashTable<Type>::findPosition(HashNode<Type> currentNode)
 {
     int position = 0;
     
