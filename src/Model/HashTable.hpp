@@ -31,7 +31,7 @@ namespace CTECData
         HashTable();
         ~HashTable();
         void add(HashNode<Type> * currentNode);
-        bool remove(HashNode<Type> * currentNode);
+        bool remove(HashNode<Type> currentNode);
         bool contains(HashNode<Type>  currentNode);
         int getSize();
     };
