@@ -24,9 +24,6 @@ namespace CTECData
         void setValue(const Type value);
         int getKey();
         Type getValue();
-        
-        
-        
     };
 }
 

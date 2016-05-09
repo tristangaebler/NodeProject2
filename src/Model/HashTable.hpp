@@ -10,6 +10,7 @@
 #define HashTable_hpp
 
 #include <stdio.h>
+#include "HashNode.cpp";
 namespace CTECData
 {
     template <class Type>
@@ -19,17 +20,17 @@ namespace CTECData
         int capacity;
         double efficiencyPercentage;
         int size;
-        Type * internalStorage;
+        HashNode<Type> * internalStorage;
         
-        int findPosition(const Type& value);
-        int handleCollision(const Type& value);
+        int findPosition(HashNode<Type> * currentNode);
+        int handleCollision(HashNode<Type> * currentNode);
         void updateSize();
     public:
         HashTable();
         ~HashTable();
-        void add(const Type& value);
-        bool remove(Type value);
-        bool contains(const Type& value);
+        void add(HashNode<Type> * currentNode);
+        bool remove(HashNode<Type> * currentNode);
+        bool contains(HashNode<Type> * currentNode);
         int getSize();
     };
 }
