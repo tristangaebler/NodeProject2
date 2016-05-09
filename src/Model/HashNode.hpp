@@ -10,5 +10,24 @@
 #define HashNode_hpp
 
 #include <stdio.h>
+namespace CTECData
+{
+    template <class Type>
+    class HashNode
+    {
+    private:
+        int key;
+        Type value;
+    public:
+        HashNode(int key, const Type& value);
+        void setKey(int key);
+        void setValue(const Type value);
+        int getKey();
+        Type getValue();
+        
+        
+        
+    };
+}
 
 #endif /* HashNode_hpp */
