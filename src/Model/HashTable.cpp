@@ -132,6 +132,27 @@ bool HashTable<Type>::isPrime(int num)
     return isPrime;
 }
 
+template <class Type>
+bool HashTable<Type>::contains(HashNode<Type> currentNode)
+{
+    bool isInTable = false;
+    
+    int index = findPosition(currentNode);
+    while (internalStorage[index] != nullptr && !isInTable)
+    {
+        if(internalStorage[index].getValue() == currentNode.getValue())
+        {
+            isInTable = true;
+        }
+        else
+        {
+            index = (index + 1) % capacity;
+        }
+
+    }
+    
+    return isInTable;
+}
 
 
 
