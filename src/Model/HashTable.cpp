@@ -7,6 +7,7 @@
 //
 
 #include "HashTable.hpp"
+#include <CMath>
 using namespace CTECData;
 
 template <class Type>
@@ -78,6 +79,44 @@ int HashTable<Type>::getNextPrime()
     }
     
     return nextPrime;
+}
+
+template <class Type>
+void HashTable<Type>::updateSize()
+{
+    
+}
+
+template <class Type>
+bool HashTable<Type>::isPrime(int num)
+{
+    bool isPrime = true;
+    
+    if(num < 1)
+    {
+        return false;
+    }
+    else if(num == 2 || num == 3)
+    {
+        isPrime = true;
+    }
+    else if(num % 2 == 0)
+    {
+        isPrime = true;
+    }
+    else
+    {
+        for(int next = 3; next <= sqrt(num) + 1; next += 2)
+        {
+            if(num % next == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    
+    return isPrime;
 }
 
 
