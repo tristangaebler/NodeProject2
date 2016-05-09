@@ -21,7 +21,7 @@ HashTable<Type>::HashTable()
 template <class Type>
 int HashTable<Type>::getSize()
 {
-    return this->size();
+    return this->size;
 }
 
 template <class Type>
@@ -45,7 +45,7 @@ void HashTable<Type>::add(const Type &value)
         {
             while (internalStorage[insertPosition] != nullptr)
             {
-                insertPosition = (insertPosition + 1) % size;
+                insertPosition = (insertPosition + 1) % capacity;
             }
             internalStorage[insertPosition] = value;
         }

@@ -282,9 +282,8 @@ void NodeController::doGraphs()
     tester.addEdge(4, 5);
     tester.addEdge(5, 6);
     
-   // tester.breadthFirstTraversal(tester, 0);
     
-    tester.breadthFirstTraversal(tester, 7);
+    
     
 
     
