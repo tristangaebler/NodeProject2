@@ -67,6 +67,19 @@ int HashTable<Type>::findPosition(HashNode<Type> currentNode)
 }
 
 
+template <class Type>
+int HashTable<Type>::getNextPrime()
+{
+    int nextPrime = (capacity * 2) + 1;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime++;
+    }
+    
+    return nextPrime;
+}
+
 
 
 

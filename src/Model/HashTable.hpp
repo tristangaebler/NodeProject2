@@ -25,6 +25,8 @@ namespace CTECData
         int findPosition(HashNode<Type> currentNode);
         int handleCollision(HashNode<Type> * currentNode);
         void updateSize();
+        int getNextPrime();
+        bool isPrime(int num);
     public:
         HashTable();
         ~HashTable();
