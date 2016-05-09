@@ -84,7 +84,20 @@ int HashTable<Type>::getNextPrime()
 template <class Type>
 void HashTable<Type>::updateSize()
 {
+    int updatedCapacity = getNextPrime();
+    HashTable<Type> * updatedStorage = new HashTable<Type> [updatedCapacity];
+    int oldCapacity = capacity;
+    capacity = updatedCapacity;
+    for(int index = 0; index < oldCapacity; index++)
+    {
+        if(internalStorage[index] != nullptr)
+        {
+            int updatedPosition = findPosition(internalStorage[index]);
+            updatedStorage[updatedPosition] = internalStorage[index];
+        }
+    }
     
+    internalStorage = updatedStorage;
 }
 
 template <class Type>
