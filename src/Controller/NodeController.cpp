@@ -268,12 +268,18 @@ void NodeController::doQuick()
 void NodeController::doGraphs()
 {
     Graph<int> tester;
+    tester.addVertex(0);
+    tester.addVertex(1);
+    tester.addVertex(2);
+    tester.addVertex(3);
+    tester.addVertex(4);
+    tester.addVertex(5);
+    tester.addVertex(6);
     tester.addVertex(7);
-    tester.addVertex(18);
-    tester.addVertex(42);
-    tester.addVertex(67);
-    tester.addVertex(32);
-    tester.addVertex(-18);
+    tester.addVertex(8);
+    tester.addVertex(9);
+    tester.addVertex(10);
+
     
     tester.addEdge(0, 1);
     tester.addEdge(1, 2);
@@ -281,12 +287,14 @@ void NodeController::doGraphs()
     tester.addEdge(3, 4);
     tester.addEdge(4, 5);
     tester.addEdge(5, 6);
-    
-    
-    
-    
+    tester.addEdge(6, 7);
+    tester.addEdge(7, 8);
+    tester.addEdge(8, 9);
+    tester.addEdge(9, 10);
 
-    
+    tester.depthFirstTraversal(tester, 0);
+    tester.breadthFirstTraversal(tester, 0);
+
 }
 
 
