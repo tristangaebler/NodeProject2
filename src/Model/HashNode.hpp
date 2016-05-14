@@ -19,9 +19,12 @@ namespace CTECData
         int key;
         Type value;
     public:
-        HashNode(int key, const Type& value);
+        HashNode();
+        HashNode(int key, Type value);
+        virtual ~HashNode();
+        
         void setKey(int key);
-        void setValue(const Type value);
+        void setValue(const Type& value);
         int getKey();
         Type getValue();
     };
