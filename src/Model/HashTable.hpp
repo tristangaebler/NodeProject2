@@ -10,6 +10,7 @@
 #define HashTable_hpp
 
 #include <stdio.h>
+#include "CTECList.h";ß
 #include "HashNode.cpp";
 namespace CTECData
 {
@@ -18,21 +19,32 @@ namespace CTECData
     {
     private:
         int capacity;
+        int tableCapacity;
         double efficiencyPercentage;
         int size;
-        HashNode<Type> * internalStorage;
+        int tableSize;
+        HashNode<Type>** internalStorage;
+        CTECList<HashNode<Type> > * tableStorage;
+        
+        void updateTableCapacity();
+        void updateSize();
         
         int findPosition(HashNode<Type> currentNode);
-        int handleCollision(HashNode<Type> * currentNode);
-        void updateSize();
+        int findTablePosition(HashNode<Type> currentNode);
+        
+        int handleCollision(HashNode<Type> currentNode);
+        
         int getNextPrime();
-        bool isPrime(int num);
+        bool isPrime(int candidateNumber);
     public:
         HashTable();
-        ~HashTable();
-        void add(HashNode<Type> * currentNode);
+        virtual ~HashTable();
+        
+        void addToTable(HashNode<Type> currentNode);
+        void add(HashNode<Type> currentNode);
+        
         bool remove(HashNode<Type> currentNode);
-        bool contains(HashNode<Type>  currentNode);
+        bool contains(HashNode<Type> currentNode);
         int getSize();
     };
 }
