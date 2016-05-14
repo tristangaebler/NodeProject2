@@ -41,7 +41,7 @@ private :
     int partition(int first, int last);
     void swap(int first, int second);
     void doQuick();
-    
+    void testTable();
 public:
 	NodeController();
 	virtual ~NodeController();
