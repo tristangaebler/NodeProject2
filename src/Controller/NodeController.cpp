@@ -297,34 +297,34 @@ void NodeController::doGraphs()
 
 }
 
-//void NodeController::testTable()
-//{
-//    HashTable<int> tempTable;
-//    HashNode<int> tempArray[10];
-//    for (int spot = 0; spot < 10; spot++)
-//    {
-//        int randomValue = rand();
-//        int randomKey = rand();
-//        HashNode<int> temp = HashNode<int>(randomKey, randomValue);
-//        tempTable.add(temp);
-//        tempArray[spot] = temp;
-//    }
-//    for (int index = 0; index < 100; index++)
-//    {
-//        bool test = tempTable.contains(tempArray[index]);
-//        string result;
-//        if (test)
-//        {
-//            result = "It's there.";
-//        }
-//        else
-//        {
-//            result = "Not anywhere.";
-//        }
-//        cout << result << endl;
-//    }
-//}
-//
+void NodeController::testTable()
+{
+    HashTable<int> tempTable;
+    HashNode<int> tempArray[10];
+    for (int spot = 0; spot < 10; spot++)
+    {
+        int randomValue = rand();
+        int randomKey = rand();
+        HashNode<int> temp = HashNode<int>(randomKey, randomValue);
+        tempTable.add(temp);
+        tempArray[spot] = temp;
+    }
+   for (int index = 0; index < 100; index++)
+    {
+        bool test = tempTable.contains(tempArray[index]);
+        string result;
+        if (test)
+        {
+            result = "It's there.";
+        }
+        else
+        {
+            result = "Not anywhere.";
+        }
+        cout << result << endl;
+    }
+}
+
 
 
 
