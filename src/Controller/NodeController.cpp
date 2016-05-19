@@ -29,7 +29,7 @@ NodeController::~NodeController() {
  */
 void NodeController :: start()
 {
-    //testTable();
+    testTable();
 }
 
 void NodeController::tryTree()
@@ -299,27 +299,28 @@ void NodeController::doGraphs()
 
 void NodeController::testTable()
 {
-    HashTable<int> tempTable;
+    HashTable<int> testTable;
     HashNode<int> tempArray[10];
     for (int spot = 0; spot < 10; spot++)
     {
-        int randomValue = rand();
-        int randomKey = rand();
-        HashNode<int> temp = HashNode<int>(randomKey, randomValue);
-        tempTable.add(temp);
+        int value = rand();
+        int key = rand();
+        HashNode<int> temp = HashNode<int>(key, value);
+        cout << temp.getValue() << endl;
+        testTable.add(temp);
         tempArray[spot] = temp;
     }
-   for (int index = 0; index < 100; index++)
+    for (int index = 0; index < 10; index++)
     {
-        bool test = tempTable.contains(tempArray[index]);
+        bool test = testTable.contains(tempArray[index]);
         string result;
         if (test)
         {
-            result = "It's there.";
+            result = "Present";
         }
         else
         {
-            result = "Not anywhere.";
+            result = "Not Present";
         }
         cout << result << endl;
     }

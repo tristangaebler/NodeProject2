@@ -22,6 +22,7 @@
 #include "../Model/CTECBinaryTree.cpp"
 #include "../Model/Graph.cpp"
 #include <string>
+#include "../Model/HashTable.cpp"
 
 using namespace std;
 
