@@ -299,6 +299,7 @@ void NodeController::doGraphs()
 
 void NodeController::testTable()
 {
+    
     HashTable<int> testTable;
     HashNode<int> tempArray[10];
     for (int spot = 0; spot < 10; spot++)
